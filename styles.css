@@ -1,0 +1,67 @@
+:root {
+    --margin-constraints: 1.5rem;
+    --filter-red: invert(18%) sepia(96%) saturate(6606%) hue-rotate(358deg) brightness(108%) contrast(117%);
+    --filter-green: invert(75%) sepia(100%) saturate(7500%) hue-rotate(83deg) brightness(104%) contrast(104%);
+    --filter-gray: brightness(0) saturate(100%) invert(73%) sepia(3%) saturate(15%) hue-rotate(9deg) brightness(94%) contrast(88%);
+}
+
+html,
+body {
+    font-family: Arial, sans-serif;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+
+}
+
+.main {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    height: 100%;
+    justify-content: center;
+    margin-left: var(--margin-constraints);
+    margin-right: var(--margin-constraints);
+}
+
+.trashcan {
+    flex: 1;
+    object-fit: contain;
+}
+
+.trashcan img {
+    object-fit: contain;
+    transition-duration: 0.3s;
+    width: 100%;
+}
+
+.trashcan img:hover {
+    transform: scale(1.1);
+}
+
+.trashcan h1 {
+    width: 100%;
+    margin-bottom: 3rem;
+    text-align: center;
+    max-width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    .trashcan h1 {
+        font-size: .8rem;
+    }
+    
+}
+
+#red {
+    filter: var(--filter-red);
+}
+
+#green {
+    filter: var(--filter-green);
+}
+
+#gray {
+    filter: var(--filter-gray);
+}
