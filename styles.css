@@ -66,6 +66,15 @@ body {
     z-index: -1;
 }
 
+.piePagina {
+    background-color: #333;
+    color: #fff; 
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;  
+}
+
 @media screen and (max-width: 768px) {
     .trashcan h1 {
         font-size: .8rem;
