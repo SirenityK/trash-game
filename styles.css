@@ -11,7 +11,7 @@ body {
     height: 100%;
     margin: 0;
     padding: 0;
-    overflow: hidden;    
+    overflow: hidden;
 }
 
 .main {
@@ -49,30 +49,36 @@ body {
 
 .backImage {
     height: 100%;
-    width: 100%;  
+    width: 100%;
     z-index: -1;
 }
 
 .fondoImage,
 .bottomImage {
-    width: 100%;  
+    width: 100%;
     z-index: -1;
 }
-  
-.backImage img { 
-    width: 100%; 
+
+.fondoImage:first-child img {
+    min-height: 100%;
+    /* Esto permite que la imagen de fondo se estire a mas de lo que puede su escala, evitando problemas en pantallas verticales */
+}
+
+.backImage img {
+    width: 100%;
     position: fixed;
     bottom: 0;
     z-index: -1;
 }
 
+
 .piePagina {
     background-color: #333;
-    color: #fff; 
+    color: #fff;
     text-align: center;
     position: fixed;
     width: 100%;
-    bottom: 0;  
+    bottom: 0;
 }
 
 @media screen and (max-width: 768px) {
