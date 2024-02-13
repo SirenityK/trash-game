@@ -11,7 +11,7 @@ body {
     height: 100%;
     margin: 0;
     padding: 0;
-
+    overflow: hidden;    
 }
 
 .main {
@@ -47,11 +47,38 @@ body {
     max-width: 100%;
 }
 
+.backImage {
+    height: 100%;
+    width: 100%;  
+    z-index: -1;
+}
+
+.fondoImage,
+.bottomImage {
+    width: 100%;  
+    z-index: -1;
+}
+  
+.backImage img { 
+    width: 100%; 
+    position: fixed;
+    bottom: 0;
+    z-index: -1;
+}
+
+.piePagina {
+    background-color: #333;
+    color: #fff; 
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;  
+}
+
 @media screen and (max-width: 768px) {
     .trashcan h1 {
         font-size: .8rem;
     }
-    
 }
 
 #red {
