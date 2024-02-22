@@ -2,31 +2,44 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.scss" />
     <title>Document</title>
 </head>
 
 <body>
-
     <div class="main">
         <div class="trashcan">
             <h1>Plástico</h1>
-            <img src="images/trashcan-red.svg" alt="trashcan">
+            <img src="images/trashcan-red.svg" alt="trashcan" />
         </div>
         <div class="trashcan">
             <h1>Orgánico</h1>
-            <img src="images/trashcan-green.svg" alt="trashcan">
+            <img src="images/trashcan-green.svg" alt="trashcan" />
         </div>
         <div class="trashcan">
             <h1>Inorgánico</h1>
-            <img src="images/trashcan-black.svg" alt="trashcan">
+            <img src="images/trashcan-black.svg" alt="trashcan" />
         </div>
         <div class="trashcan">
             <h1>Aluminio</h1>
-            <img src="images/trashcan-gray.svg" alt="trashcan">
+            <img src="images/trashcan-gray.svg" alt="trashcan" />
         </div>
+        <h1 id="start" onclick="start()">Comenzar</h1>
+        <div id="recycle-card">
+            <div style="border-radius: 1rem 0 0 1rem;">
+                <img src="https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Introduction/dino.svg"
+                    alt="recyclable" />
+            </div>
+            <div style="border-radius: 0 1rem 1rem 0; display: grid;">
+                <h1>¿Qué tipo de desechable es este?</h1>
+            </div>
+        </div>
+    </div>
     </div>
 
     <div class="backImage">
@@ -48,9 +61,9 @@
     </div>
 
     <div class="piePagina">
-        <h1>Score: </h1>
+        <h1>Score:</h1>
     </div>
-
+    <script src="main.js"></script>
 </body>
 
 </html>
