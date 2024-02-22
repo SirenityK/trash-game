@@ -1,5 +1,13 @@
 {
+  "name": "trash-game",
+  "source": "src/index.html",
+  "scripts": {
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html",
+    "produce": "rimraf dist .parcel-cache && parcel build src/index.html && serve dist"
+  },
   "devDependencies": {
+    "@parcel/transformer-sass": "2.11.0",
     "parcel": "^2.11.0",
     "sharp": "^0.31.1"
   }
