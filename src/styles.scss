@@ -25,53 +25,7 @@ h1 {
   margin: 0 !important;
 }
 
-#start {
-  position: sticky;
-  color: white;
-  text-align: center;
-  width: fit-content;
-  padding: 0.5rem 1rem;
-  background-color: cornflowerblue;
-  border-radius: 0.5rem;
-  user-select: none;
-
-  &:hover {
-    transform: scale(1.05);
-    transition-duration: 100ms;
-  }
-}
-
-#recycle-card {
-  position: absolute;
-  display: grid;
-  width: calc(100% - $margin-constraints * 2);
-  align-items: center;
-  justify-content: center;
-  grid-template-columns: 20% 40%;
-  min-height: 32rem;
-
-  & > div {
-    backdrop-filter: blur(10px) brightness(50%);
-    animation: fadeInBackground 1s;
-    /* animation-direction: reverse; */
-    height: 100%;
-  }
-
-  img {
-    width: 100%;
-    height: 100%;
-  }
-
-  h1 {
-    color: white;
-    text-align: center;
-    align-self: center;
-    word-wrap: break-word;
-    padding: 1rem;
-  }
-}
-
-.main {
+#main {
   align-content: center;
   align-items: center;
   display: grid;
@@ -81,22 +35,97 @@ h1 {
   justify-content: center;
   margin-left: $margin-constraints;
   margin-right: $margin-constraints;
-}
 
-.trashcan {
-  img {
-    transform: scale($trashcan-initial-scale);
-    transition-duration: 0.3s;
-    width: 100%;
-    user-select: none;
+  @media screen and (max-width: 768px) {
+    grid-template-columns: 1fr 1fr;
   }
 
-  img:hover {
-    transform: scale(calc($trashcan-initial-scale + 0.1));
-  }
-
-  h1 {
+  #score {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    color: white;
     text-align: center;
+    width: fit-content;
+    justify-content: end;
+    padding: 0.5rem 1rem;
+    background-color: #333;
+    border-radius: 0.5rem;
+    grid-column: 4;
+    justify-self: center;
+
+    @media screen and (max-width: 768px) {
+      grid-column: 2;
+    }
+  }
+
+  #case img {
+    width: 30%;
+  }
+
+  #start {
+    color: white;
+    text-align: center;
+    width: fit-content;
+    padding: 0.5rem 1rem;
+    background-color: cornflowerblue;
+
+    border-radius: 0.5rem;
+    user-select: none;
+
+    &:hover {
+      transform: scale(1.05);
+      transition-duration: 100ms;
+    }
+  }
+
+  #recycle-card {
+    position: absolute;
+    width: calc(100% - $margin-constraints * 2);
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: 20% 40%;
+    min-height: 32rem;
+
+    & > div {
+      display: grid;
+      align-items: center;
+      justify-content: center;
+      backdrop-filter: blur(10px) brightness(50%);
+      animation: fadeInBackground 1s;
+      /* animation-direction: reverse; */
+      display: grid;
+      height: 100%;
+    }
+
+    img {
+      width: 95%;
+      max-height: 90%;
+    }
+
+    h1 {
+      color: white;
+      text-align: center;
+      align-self: center;
+      word-wrap: break-word;
+      padding: 1rem;
+    }
+  }
+
+  .trashcan {
+    img {
+      transform: scale($trashcan-initial-scale);
+      transition-duration: 0.3s;
+      width: 100%;
+      user-select: none;
+    }
+
+    img:hover {
+      transform: scale(calc($trashcan-initial-scale + 0.1));
+    }
+
+    h1 {
+      text-align: center;
+    }
   }
 }
 
