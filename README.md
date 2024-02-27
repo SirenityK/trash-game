@@ -5,18 +5,28 @@ Programa implementado a través de la Coordinación General de Proyectos de Gest
 
 Promueve acciones concretas para la prevención y minimización de la generación de residuos, identifica la mejora de procesos, esquemas de valorización de residuos, y evita, al máximo posible, el confinamiento como método de disposición final.
 
-## Building
-Para preparar el proyecto para distribuirlo, se requiere tener npm (aunque se recomienda pnpm o bun)
+## Compilación
+Para preparar el proyecto y distribuirlo, se requiere tener [npm](https://www.npmjs.com/package/npm) (aunque se recomienda [pnpm](https://pnpm.io/installation) o [bun](https://bun.sh))
 
 ```bash
 sudo apt install nodejs
 npm i # o pnpm
-npm run parcel build src/index.html
+npm run build
 ```
 Se creará un directorio `dist/` con los archivos listos para distribuirse
 
-Si se quiere probar el servidor en tiempo real
+En caso de que desee ver el proyecto en tiempo real, ejecute una de las siguientes opciones:
 ```bash
-npm run parcel src/index.html
+npm run dev
 ```
-se abrirá un servidor de desarrollo en http://localhost:1234 donde los cambios se actualizarán inmediatamente
+```bash
+pnpm dev
+```
+
+## Producción
+Este comando sirve para `servir` los archivos generados en el directorio `dist/`, donde finalmente el producto final se construirá y servirá:
+```bash
+# produce es un comando personalizado en package.json
+npm run produce # o `pnpm produce`
+```
+se abrirá un servidor de desarrollo en http://localhost:3000 donde los cambios se actualizarán inmediatamente
