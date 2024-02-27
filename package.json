@@ -1,14 +1,23 @@
 {
   "name": "trash-game",
-  "source": "src/index.html",
+  "source": [
+    "src/index.html"
+  ],
+  "browserlist": [
+    "defaults"
+  ],
   "scripts": {
-    "start": "parcel src/index.html",
-    "build": "parcel build src/index.html",
-    "produce": "rimraf dist .parcel-cache && parcel build src/index.html && serve dist"
+    "dev": "parcel -p 3000",
+    "build": "parcel build",
+    "produce": "rimraf dist .parcel-cache && parcel build --no-source-maps && serve dist"
   },
   "devDependencies": {
+    "@parcel/config-default": "^2.11.0",
+    "@parcel/resolver-glob": "^2.11.0",
     "@parcel/transformer-sass": "2.11.0",
     "parcel": "^2.11.0",
+    "rimraf": "^5.0.5",
+    "serve": "^14.2.1",
     "sharp": "^0.31.1"
   }
 }
