@@ -24,7 +24,7 @@ export function createImage(src: string) {
   return image;
 }
 
-export default function startGame() {
+export default function startGame(): Array<string> {
   const [recyclableType, recyclableImage] = getRandomItem(images);
 
   return [recyclableType, recyclableImage];
