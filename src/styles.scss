@@ -1,7 +1,8 @@
+@import "bootstrap/scss/bootstrap";
 @import url(https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap);
 
 $margin-constraints: 1.5rem;
-$trashcan-initial-scale: 0.6;
+$trashcan-initial-scale: 0.8;
 
 @keyframes fadeInBackground {
   from {
@@ -16,13 +17,82 @@ $trashcan-initial-scale: 0.6;
 
 html,
 body {
-  font-family: "inter", sans-serif;
+  font-family: "inter", sans-serif !important;
   height: 100%;
-  margin: 0;
+  max-width: 100%;
+  display: grid;
+  align-items: center;
+  grid-template-rows: 1fr;
+  @media screen and (max-width: 768px) {
+    height: auto;
+  }
 }
 
-h1 {
-  margin: 0 !important;
+#recycle-card {
+  position: absolute;
+  width: calc(100% - $margin-constraints * 2);
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: 20% 40%;
+  min-height: 32rem;
+
+  & > div {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    backdrop-filter: blur(10px) brightness(50%);
+    animation: fadeInBackground 1s;
+    /* animation-direction: reverse; */
+    display: grid;
+    height: 100%;
+  }
+
+  img {
+    width: 95%;
+    max-height: 90%;
+  }
+
+  h1 {
+    color: white;
+    word-wrap: break-word;
+  }
+}
+
+.container {
+  // position: absolute;
+  // top: 50%;
+  // transform: translate(0, -50%);
+  min-width: 100%;
+  align-items: center;
+
+  .trashcan {
+    svg {
+      transition-duration: 300ms;
+      transform: scale($trashcan-initial-scale);
+    }
+
+    svg:hover {
+      transform: scale(calc($trashcan-initial-scale + 0.1));
+    }
+  }
+
+  #case img {
+    width: 30%;
+  }
+
+  #start {
+    color: white;
+    background-color: cornflowerblue;
+  }
+
+  #score {
+    justify-items: center;
+    h1 {
+      align-self: center;
+      color: white;
+      background-color: #333;
+    }
+  }
 }
 
 #main {
@@ -89,7 +159,7 @@ h1 {
     & > div {
       display: grid;
       align-items: center;
-      justify-content: center;
+      justify-items: center;
       backdrop-filter: blur(10px) brightness(50%);
       animation: fadeInBackground 1s;
       /* animation-direction: reverse; */
@@ -112,14 +182,17 @@ h1 {
   }
 
   .trashcan {
-    img {
+    display: grid;
+    justify-content: center;
+    svg {
+      border: 1px transparent;
       transform: scale($trashcan-initial-scale);
       transition-duration: 0.3s;
       width: 100%;
       user-select: none;
     }
 
-    img:hover {
+    svg:hover {
       transform: scale(calc($trashcan-initial-scale + 0.1));
     }
 
