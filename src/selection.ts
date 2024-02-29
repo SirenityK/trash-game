@@ -16,7 +16,7 @@ function getRandomItem(object: object): Array<string> {
   return [selectedType, selectedImage];
 }
 
-export function createImage(src: string) {
+export function createImage(src: string): HTMLImageElement {
   const imageURL = new URL(src, import.meta.url);
   const image = document.createElement("img");
   image.src = imageURL.toString();
@@ -24,7 +24,7 @@ export function createImage(src: string) {
   return image;
 }
 
-export default function startGame() {
+export default function startGame(): Array<string> {
   const [recyclableType, recyclableImage] = getRandomItem(images);
 
   return [recyclableType, recyclableImage];

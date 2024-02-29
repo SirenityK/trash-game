@@ -6,7 +6,7 @@ Programa implementado a través de la Coordinación General de Proyectos de Gest
 Promueve acciones concretas para la prevención y minimización de la generación de residuos, identifica la mejora de procesos, esquemas de valorización de residuos, y evita, al máximo posible, el confinamiento como método de disposición final.
 
 ## Compilación
-Para preparar el proyecto y distribuirlo, se requiere tener [npm](https://www.npmjs.com/package/npm) (aunque se recomienda [pnpm](https://pnpm.io/installation) o [bun](https://bun.sh))
+Para preparar el proyecto y distribuirlo, se requiere tener [npm](https://www.npmjs.com/package/npm) (aunque se recomienda [pnpm](https://pnpm.io/installation))
 
 ```bash
 sudo apt install nodejs

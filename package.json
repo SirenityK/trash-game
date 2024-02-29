@@ -1,33 +1,47 @@
 {
   "name": "trash-game",
-  "source": [
-    "src/index.html"
-  ],
+  "alias": {
+    "react": "preact/compat",
+    "react-dom/test-utils": "preact/test-utils",
+    "react-dom": "preact/compat",
+    "react/jsx-runtime": "preact/jsx-runtime",
+    "preact/jsx-dev-runtime": "preact/jsx-runtime"
+  },
   "browserlist": [
     "defaults"
   ],
+  "source": [
+    "src/index.html"
+  ],
   "scripts": {
     "dev": "parcel -p 3000",
-    "build": "rimraf dist .parcel-cache && parcel build",
+    "clean": "rimraf dist .parcel-cache",
+    "build": "rimraf dist .parcel-cache && parcel build --no-source-maps",
     "produce": "rimraf dist .parcel-cache && parcel build --no-source-maps && serve dist",
     "serve": "serve dist"
   },
   "devDependencies": {
-    "@parcel/config-default": "^2.11.0",
-    "@parcel/resolver-glob": "^2.11.0",
-    "@parcel/transformer-sass": "2.11.0",
-    "buffer": "^5.5.0||^6.0.0",
+    "@parcel/config-default": "^2.12.0",
+    "@parcel/resolver-glob": "^2.12.0",
+    "@parcel/transformer-sass": "2.12.0",
+    "buffer": "^6.0.3",
     "crypto-browserify": "^3.12.0",
-    "events": "^3.1.0",
-    "parcel": "^2.11.0",
+    "events": "^3.3.0",
+    "parcel": "^2.12.0",
+    "postcss": "^8.2.1",
+    "postcss-modules": "^4.3.0",
     "process": "^0.11.10",
     "rimraf": "^5.0.5",
     "serve": "^14.2.1",
-    "sharp": "^0.31.1",
+    "sharp": "^0.31.3",
     "stream-browserify": "^3.0.0",
     "string_decoder": "^1.3.0"
   },
   "dependencies": {
+    "@popperjs/core": "^2.11.8",
+    "bootstrap": "^5.3.3",
+    "preact": "^10.19.6",
     "random-js": "^2.1.0"
-  }
+  },
+  "license": "MIT"
 }
