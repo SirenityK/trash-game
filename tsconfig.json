@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "lib": ["ES2015"],
+    "jsx": "react-jsx",
+    "jsxImportSource": "preact",
+    "skipLibCheck": true,
+    "baseUrl": "./src",
+    "paths": {
+      "react": ["./node_modules/preact/compat/"],
+      "react-dom": ["./node_modules/preact/compat/"]
+    }
+  }
+}

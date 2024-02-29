@@ -1,10 +1,24 @@
-import * as bootstrap from "bootstrap"
+import { hydrate } from "preact";
+import { trashcan, getColor } from "./trashcan";
 
-var selection;
+var selection: any;
+
+let trashcans = document.getElementById("trash-locations");
+for (let i = 0; i < trashcans.children.length; i++) {
+  let type = getColor(i);
+  hydrate(trashcan(type), trashcans.children[i]);
+  hydrate(<h1>{type}</h1>, trashcans.children[i]);
+}
 
 (async () => {
   selection = await import("./selection");
 })();
+
+declare global {
+  interface Window {
+    start: () => void;
+  }
+}
 
 class RecyclingGame {
   private recycleCard: HTMLElement;
@@ -44,12 +58,12 @@ class RecyclingGame {
   }
 
   public async start(): Promise<void> {
+    this.hideStartButton();
     const [recyclableType, recyclableImage] = await this.selectRecyclable();
     this.currentRecyclable = recyclableType;
 
     this.image = selection.createImage(recyclableImage);
     this.imageBlock.src = recyclableImage;
-    this.hideStartButton();
     this.showRecycleCard();
 
     let counter: number = 4;
