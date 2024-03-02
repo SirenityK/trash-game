@@ -51,6 +51,7 @@ body {
 }
 
 #recycle-card {
+  display: grid;
   position: absolute;
   width: calc(100% - $margin-constraints * 2);
   align-items: center;
@@ -96,13 +97,14 @@ body {
   }
 
   #case img {
-    width: 30%;
+    width: 25%;
   }
 
   #start {
     @include button($white, $primary);
 
     h1 {
+      cursor: pointer;
       transition-duration: 200ms;
 
       &:hover {

@@ -24,7 +24,7 @@ pnpm dev
 ```
 
 ## Producción
-Este comando sirve para `servir` los archivos generados en el directorio `dist/`, donde finalmente el producto final se construirá y servirá:
+Este comando sirve para `servir` los archivos generados en el directorio `dist/`, donde finalmente el producto final se compilará y servirá:
 ```bash
 # produce es un comando personalizado en package.json
 npm run produce # o `pnpm produce`
