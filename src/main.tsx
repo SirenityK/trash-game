@@ -1,4 +1,4 @@
-import { render } from "preact";
+import { hydrate } from "preact";
 import { useState } from "preact/hooks";
 import { Trashcan, getColor } from "./trashcan";
 import { RandomImage } from "./selection";
@@ -180,4 +180,4 @@ function Page() {
   );
 }
 
-render(<Page />, document.body);
+hydrate(<Page />, document.body);
