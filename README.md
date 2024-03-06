@@ -24,11 +24,11 @@ El repositorio contiene una sección de publicaciones listas para su distribuci�
 ```nginx
 location / {
     autoindex on;
-    root /home/sirenityk/git/trash-game/dist;
+    root $LOCALIZACION_DE_LOS_ARCHIVOS/dist;
 
     # opcional
-    gzip on;incluir los mime types aquí
-    gzip_types text/plain text/css text/javascript application/x-javascript text/xml text/x-json text/x-markdown image/svg+xml; # opcional
+    gzip on; # alternativamente, puede incluir los mime types antes para evitar poner gzip_types después
+    gzip_types text/plain text/css text/javascript application/x-javascript text/xml text/x-json text/x-markdown image/svg+xml;
 }
 ```
 
